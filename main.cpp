@@ -2,7 +2,7 @@
 // CSC150 - Program Fundamentals I
 // Section: 3
 // Team: Jayaditya Meesala and Javion Wilkins
-// GitHub:
+// GitHub: https://github.com/shakoooni/Math-Tutor---Version-2
 
 #include <iostream>   // cout, cin
 #include <string>     // string, getline
@@ -73,7 +73,7 @@ int main() {
 
     // ask the question (single cout format for all types)
     cout << endl << "Alright, " << name << " - here is your challenge..." << endl;
-    cout << "What is " << leftNum << " " << mathSymbol << " " << rightNum << "? ";
+    cout << "What is " << leftNum << " " << mathSymbol << " " << rightNum << "? :  ";
     cin >> userAnswer;
 
     // results (aligned, ASCII-only)
