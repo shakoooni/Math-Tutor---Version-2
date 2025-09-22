@@ -71,7 +71,7 @@ int main() {
             return -1;
     }
 
-    // ask the question
+    // question
     cout << endl << "Alright, " << name << " - here is your challenge..." << endl;
     cout << "What is " << leftNum << " " << mathSymbol << " " << rightNum << "? :  ";
     cin >> userAnswer;
