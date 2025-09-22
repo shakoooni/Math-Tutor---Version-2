@@ -20,7 +20,7 @@ int main() {
     // seed randomness
     srand(static_cast<unsigned int>(time(0)));
 
-    // ASCII header (your art)
+
     cout << R"(***********************************************************************
       __  __       _   _       _____      _
      |  \/  | __ _| |_| |__   |_   _|   _| |_ ___  _ __
@@ -34,7 +34,7 @@ int main() {
 *     Math joke: Parallel lines so close, yet never meant to meet.    *
 ***********************************************************************)" << endl;
 
-    // get full name (with spaces)
+    // get full name
     cout << "Enter your full name: ";
     getline(cin, name);
 
@@ -43,13 +43,13 @@ int main() {
     rightNum = rand() % 10 + 1;
     mathType = rand() % 4 + 1;
 
-    // decide operator and compute correct answer (switch required)
+    // decide operator and compute correct answer
     switch (mathType) {
         case 1: // addition
             mathSymbol = '+';
             correctAnswer = leftNum + rightNum;
             break;
-        case 2: // subtraction (swap to avoid negative answers)
+        case 2: // subtraction
             mathSymbol = '-';
             if (leftNum < rightNum) { temp = leftNum; leftNum = rightNum; rightNum = temp; }
             correctAnswer = leftNum - rightNum;
@@ -58,7 +58,7 @@ int main() {
             mathSymbol = '*';
             correctAnswer = leftNum * rightNum;
             break;
-        case 4: // division (scale to avoid fractions)
+        case 4: // division
             mathSymbol = '/';
             correctAnswer = leftNum; // original left before scaling
             leftNum *= rightNum;     // make division clean
@@ -71,12 +71,12 @@ int main() {
             return -1;
     }
 
-    // ask the question (single cout format for all types)
+    // ask the question
     cout << endl << "Alright, " << name << " - here is your challenge..." << endl;
     cout << "What is " << leftNum << " " << mathSymbol << " " << rightNum << "? :  ";
     cin >> userAnswer;
 
-    // results (aligned, ASCII-only)
+    // results
     cout << endl;
     cout << "+--------------------- RESULT -------------------+" << endl;
     cout << "| Question : " << leftNum << " " << mathSymbol << " " << rightNum << endl;
