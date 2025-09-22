@@ -1,4 +1,4 @@
-🎓 Math Tutor V2
+Math Tutor V2
 📑 Table of Contents
 
 Summary
@@ -12,9 +12,9 @@ Maintainers
 📘 Summary
 
 This isn’t just a program… it’s your personal math gym.
-Every time you run it, it throws a new random challenge your way — addition, subtraction, multiplication, division.
+Every time you run it, it throws a new random challenge your way — addition, subtraction, multiplication, or division.
 
-But don’t worry — no fractions, no negative nonsense. Just pure, clean kid-friendly math.
+But don’t worry — no fractions, no negatives. Just clean, kid-friendly math.
 Think of it as a sparring match between you and numbers.
 
 💻 Console Output Example
@@ -46,12 +46,24 @@ Thanks for playing, Jacob!
 
 📖 User Guide
 
-Run it → the Math Tutor boots up with a cheesy ASCII banner.
+Run the program → the Math Tutor boots up with a big ASCII banner.
 
-Say your name → because math is personal.
+Enter your name → because math is personal.
 
-Brace yourself → it will generate one random problem (from the four horsemen of arithmetic: +, -, ×, ÷).
+Get a random math problem → one of the 4 basics: +, -, ×, ÷.
 
-Answer → type it in.
+Subtraction always non-negative.
 
-Smile at the outro → the Tutor thanks you like a good friend.
+Division always whole numbers.
+
+Answer it → type your guess and hit Enter.
+
+See results instantly → the program checks your answer and shows feedback.
+
+Outro → the Tutor thanks you for playing.
+
+👩‍💻 Maintainers
+
+Jayaditya Meesala
+
+Javion Wilkins
