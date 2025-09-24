@@ -14,7 +14,9 @@ using namespace std;
 int main() {
     // variables
     string name;
-    int leftNum = 0, rightNum = 0, mathType = 0;
+    int leftNum = 0;
+    int rightNum = 0;
+    int mathType = 0;
     char mathSymbol = '?';
     int correctAnswer = 0, userAnswer = 0, temp = 0;
 
