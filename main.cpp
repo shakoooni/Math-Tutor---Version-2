@@ -3,7 +3,8 @@
 // Section: 3
 // Team: Jayaditya Meesala and Javion Wilkins
 // GitHub: https://github.com/shakoooni/Math-Tutor---Version-2
-
+// Description: The Math Tutor V2 asks the user for there name and then ask a math question
+#include <stdio.h>
 #include <iostream>   // cout, cin
 #include <string>     // string, getline
 #include <cstdlib>    // rand, srand
@@ -18,7 +19,7 @@ int main() {
     int correctAnswer = 0, userAnswer = 0, temp = 0;
 
     // seed randomness
-    srand(static_cast<unsigned int>(time(0)));
+    srand(time(0));
 
 
     cout << R"(***********************************************************************
@@ -44,24 +45,29 @@ int main() {
     mathType = rand() % 4 + 1;
 
     // decide operator and compute correct answer
+    cout << endl << "Alright, " << name << " - here is your challenge..." << endl;
     switch (mathType) {
         case 1: // addition
             mathSymbol = '+';
             correctAnswer = leftNum + rightNum;
+        cout << "What is " << leftNum << " " << mathSymbol << " " << rightNum << "? :  ";
             break;
         case 2: // subtraction
             mathSymbol = '-';
             if (leftNum < rightNum) { temp = leftNum; leftNum = rightNum; rightNum = temp; }
             correctAnswer = leftNum - rightNum;
+        cout << "What is " << leftNum << " " << mathSymbol << " " << rightNum << "? :  ";
             break;
-        case 3: // multiplication
+        case 3: // multiplication takes our 2 numbers and multiplies them together
             mathSymbol = '*';
             correctAnswer = leftNum * rightNum;
+        cout << "What is " << leftNum << " " << mathSymbol << " " << rightNum << "? :  ";
             break;
-        case 4: // division
+        case 4: // division confirms the left number is bigger than the right number
             mathSymbol = '/';
             correctAnswer = leftNum; // original left before scaling
             leftNum *= rightNum;     // make division clean
+        cout << "What is " << leftNum << " " << mathSymbol << " " << rightNum << "? :  ";
             break;
         default: // error fallback
             cout << endl << "*** ERROR ***" << endl;
@@ -71,12 +77,11 @@ int main() {
             return -1;
     }
 
-    // question
-    cout << endl << "Alright, " << name << " - here is your challenge..." << endl;
-    cout << "What is " << leftNum << " " << mathSymbol << " " << rightNum << "? :  ";
+
+    //space for the user to answer the question
     cin >> userAnswer;
 
-    // results
+    // results asqi art for the results to make it look good
     cout << endl;
     cout << "+--------------------- RESULT -------------------+" << endl;
     cout << "| Question : " << leftNum << " " << mathSymbol << " " << rightNum << endl;
