@@ -18,7 +18,9 @@ int main() {
     int rightNum = 0;
     int mathType = 0;
     char mathSymbol = '?';
-    int correctAnswer = 0, userAnswer = 0, temp = 0;
+    int correctAnswer = 0;
+    int userAnswer = 0;
+    int temp = 0;
 
     // seed randomness
     srand(time(0));
